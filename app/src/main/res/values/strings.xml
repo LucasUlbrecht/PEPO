@@ -1,0 +1,241 @@
+<resources>
+
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="music_list">
+        <item>Say My Name</item>
+        <item>Ending of Beginning</item>
+        <item>Paranoia</item>
+    </string-array>
+        <string name="app_name">PEPO</string>
+        <string name="home">Home</string>
+        <string name="letra">Letra</string>
+        <string name="config">Configurações</string>
+        <string name="sair">Sair</string>
+        <string name="tema">Tema</string>
+        <string name="waitingMusic">carregando musica</string>
+    <string name="paranoia">
+        Two sides to a story but they never tell my side
+        Never been the kinda guy to stay inside the guidelines
+        I know Im the bad guy, I dont gotta ask why
+        If you try step to me, itll be the last time
+        I got dirt on my name, six feet in the ground
+        I got people in my past try bringin me down
+        Say Im losin my mind, I dont wanna be found
+        Grew up in the shadow but I know they watchin me now
+        Paranoia, on the go, Im moving silent (lets go)
+        Pull up on ya, I got trouble right behind me (lets go)
+        Bite the bullet, suit and tie, the silver linin
+        Im-im-im-im gonna show you how to crash a party
+        Every time you pop off, they hopin that you fall hard
+        They prayin for the death of a rockstar
+        Everybody hatin ever since you got more
+        They prayin for the death of a rockstar
+        Ooh, they love it when you lost, boy
+        Now the low life at the top floor
+        Everybody hatin ever since you got more
+        They prayin for the death of a rockstar
+        They talk about me, I forget to listen
+        At least I get the recognition
+        Heavyweight, I pull up on you with the repetition
+        You in the pit, its not no exhibition
+        Oh, they big mad, Im the big boss
+        Talk a big game, take a big loss
+        Growin up, I was the problem that they didnt solve
+        Im the piece that wouldnt fit inside the jigsaw
+        I got a lotta punch lines and a quick jab
+        Im runnin straight through, I dont gotta zig-zag
+        I got a heavy heart, its hard to lift that
+        From the cradle to the grave, never changed, make em dig that
+        Paranoia, on the go, Im moving silent (lets go)
+        Pull up on ya, I got trouble right behind me (lets go)
+        Bite the bullet, suit and tie, the silver linin
+        Im-im-im-im gonna show you how to crash a party
+        Every time you pop off, they hopin that you fall hard
+        They prayin for the death of a rockstar
+        Everybody hatin ever since you got more
+        They prayin for the death of a rockstar
+        Ooh, they love it when you lost, boy
+        Now the low life at the top floor
+        Everybody hatin ever since you got more
+        They prayin for the death of a rockstar
+        They wanna kiss me long good night with a rose
+        Hoping that the Eiffel falls, of course
+        You dont understand the life we chose
+        (On life support, life goes)
+        I need my silence, my privacy so I can heal
+        And even rockstars got feelings that they feel
+        In reality, this just repeats like a drill
+        Always, oh-oh, oh-oh
+        Every time you pop off, they hopin that you fall hard
+        They prayin for the death of a rockstar (yeah, yeah)
+        Everybody hatin ever since you got more
+        They prayin for the death of a rockstar
+        Ooh, they love it when you lost, boy (when you lost)
+        Now the low life at the top floor (top floor)
+        Everybody hatin ever since you got more (ever since you got more)
+        They prayin for the death of a rockstar
+        Pop off, they hopin that you fall hard
+        They prayin for the death of a rockstar
+        Everybody hatin ever since you got more (ever since you got more)
+        They prayin for the death of a rockstar
+    </string>
+    <string name="saymyname">
+        You could use a buddy
+        Dont you want a pal?
+        (Yes I do! Yes I do)
+        Girl, the way I see it
+        Your daddy should be leavin
+        And you should stick around
+        What?
+        Nothing
+        So, Lydia, dont end yourself
+        Defend yourself
+        Daddy is the one you should maim
+        Together well exterminate, assassinate
+        No
+        The finer points can wait
+        But first you gotta say my name
+        Go ahead and jump but that wont stop him
+        Here you got a solid plan B option
+        I can bring your daddy so much pain
+        All you gotta do is say my name
+        Girl, just say it three times in a row
+        And you wont believe how far Ill go
+        Im on the bench, but coach
+        Just put me in the game
+        All you gotta do is say my name
+        I dont know your name
+        Well, I cant say it
+        How bout a game of charades?
+        Yes, lets play it
+        Two words
+        Right
+        Second word
+        Uh-huh
+        Drink?
+        No
+        Beverage?
+        No
+        Wine?
+        No
+        Juice?
+        Yes
+        Okay
+        First word
+        Okay
+        Bug?
+        No
+        Ant?
+        Close, but no
+        Beetle?
+        Yes
+        Beetlejuice ?
+        Wow, Im impressed
+        And all you gotta do is say my name three times
+        Three times in a row it must be spoken unbroken
+        Ready?
+        Yeah
+        Okay, go
+        Beetlejuice
+        Yes
+        Beetlejuice
+        Yes
+        Be
+        Oh, oh, this is gonna be so good
+        Cause
+        What?
+        Youre so smart
+        A stand-up bro
+        Ill think about your offer
+        Let you know
+        But I prefer my chances down below
+        Beetlejuice
+        Yes
+        Beetlejuice
+        Yes
+        Being young and female doesnt mean that Im an easy mark
+        Ive been swimming with piranhas
+        I dont need a shark
+        Yes, life sucks
+        But not that much
+        Okay, Beetlejuice
+        Beetlejuice
+        Be a doll and spare the lecture
+        Im offering you a full time specter
+        But are you any good?
+        You betcha
+        Trust me, baby
+        I just met ya
+        Really its a flattering offer
+        Dont you wanna see dad suffer?
+        I think Id rather just jump off
+        No
+        I may be suicidal
+        But Beetlejuice , its not as if Ive lost my mind
+        So, playing hardball, huh?
+        You are tougher than you look
+        Just wanna make sure I know who Im working with
+        Got any references?
+        Lydia, there you are
+        Are you alright?
+        A-Dog, B-Town, my old pals
+        You, get away from her
+        Lydia, this is a dangerously unstable individual
+        Beetlejuice is sexy
+        Beetlejuice is smart
+        BJ is a graduate of Juilliard
+        He can help
+        We found him on Yelp
+        Our troubles all ended on the day that we befriended him
+        Every word is the truth
+        Beetlejuice , Beetlejuice , Beetlejuice
+        What the heck was that?
+        So violating
+        There you go, kid
+        Couple of five-star reviews
+        What was that?
+        That was possession
+        Any ghost can do that in less than one lesson
+        Any ghost?
+        Pretty much, any ghostll do sure
+        Then, Beetlejuice , what do I need you for?
+        Woah, woah, woah woah woah
+        Hold up, hold up, girl, Im your pal
+        Theyre sweet, but Im a demon straight from Hell
+        I know, I went a little hard on my sell
+        But were BF-F-F-Fs forever
+        Agh
+        Lydia
+        What? He was already dead
+        And you heard what he said, any ghost can do that possession stuff
+        We dont need that demon
+        The three of us alone can wreck dads evening
+        Together we can make a grown man weep
+        Guys, I got a dinner date to keep
+        Okay, so whats the plan?
+        Teach dad a lesson
+        Hes gonna freak when we possess him
+        So he wants the perfect daughter
+        Ill lead that lamb to slaughter
+        Yeah, I got game
+        Im gonna make him say my name
+        (Make him say your name)
+        Ill make him say my name
+        (Make him say your name)
+        Ill make him say my name
+        (Make him say your name)
+        Not running away
+        Ill make him say my name
+    </string>
+
+    <string-array name="temas">
+        <item>Melancia</item>
+        <item>Maçã</item>
+    </string-array>
+
+
+</resources>

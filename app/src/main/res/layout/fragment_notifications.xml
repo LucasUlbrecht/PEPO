@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.notifications.NotificationsFragment">
+
+    <ImageButton
+        android:id="@+id/imgBtnSair"
+        android:layout_width="41dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:background="#00000000"
+        android:src="@drawable/baseline_exit_to_app_24"
+        android:onClick="exit"
+        app:layout_constraintStart_toEndOf="@+id/txtSair"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/txtSair"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="330dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/sair"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textStyle="bold"/>
+
+    <Spinner
+        android:id="@+id/spinnerTema"
+        android:layout_width="333dp"
+        android:layout_height="53dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="44dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imgBtnSair" />
+</androidx.constraintlayout.widget.ConstraintLayout>

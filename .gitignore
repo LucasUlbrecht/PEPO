@@ -1,0 +1,52 @@
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+*.iml
+.gradle
+/local.properties
+/.idea/caches
+/.idea/libraries
+/.idea/modules.xml
+/.idea/workspace.xml
+/.idea/navEditor.xml
+/.idea/assetWizardSettings.xml
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+
+#Arquivos de configuração local
+.settings/
+.classpath
+.project
+
+# Logs e arquivos de saída
+*.log
+*.cache
+*.out
+
+# Arquivos de IDE específicos
+.idea/
+*.iml
+
+# Arquivos temporários
+*.tmp
+*.swp
+*.bak
+gradlew
+gradlew.bat
+.properties
