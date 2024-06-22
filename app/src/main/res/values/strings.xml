@@ -10,13 +10,13 @@
         <item>Ending of Beginning</item>
         <item>Paranoia</item>
     </string-array>
-        <string name="app_name">PEPO</string>
-        <string name="home">Home</string>
-        <string name="letra">Letra</string>
-        <string name="config">Configurações</string>
-        <string name="sair">Sair</string>
-        <string name="tema">Tema</string>
-        <string name="waitingMusic">carregando musica</string>
+    <string name="app_name">PEPO</string>
+    <string name="home">Home</string>
+    <string name="letra">Letra</string>
+    <string name="config">Configurações</string>
+    <string name="sair">Sair</string>
+    <string name="tema">Tema</string>
+    <string name="waitingMusic">carregando musica</string>
     <string name="paranoia">
         Two sides to a story but they never tell my side
         Never been the kinda guy to stay inside the guidelines
@@ -235,6 +235,7 @@
     <string-array name="temas">
         <item>Melancia</item>
         <item>Maçã</item>
+        <item>Uva</item>
     </string-array>
 
 

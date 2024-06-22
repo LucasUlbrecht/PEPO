@@ -10,13 +10,14 @@ import com.example.trab1progmov.MusicPlayerListener;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CopyOnWriteArrayList;
 
 public class MusicPlayer {
     private static MusicPlayer instance;
     private MediaPlayer mediaPlayer;
     private Context applicationContext;
     private Music currentMusic;
-    private List<MusicPlayerListener> listeners = new ArrayList<>();
+    private List<MusicPlayerListener> listeners = new CopyOnWriteArrayList<>();
 
     public void addListener(MusicPlayerListener listener) {
         listeners.add(listener);
@@ -24,6 +25,10 @@ public class MusicPlayer {
 
     public void removeListener(MusicPlayerListener listener) {
         listeners.remove(listener);
+    }
+
+    public void clearListeners() {
+        listeners.clear();
     }
 
     private void notifyMusicStarted(Music music) {

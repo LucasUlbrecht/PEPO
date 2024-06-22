@@ -11,4 +11,5 @@
     <color name="corFundoDia">#FFF9F8B4</color>
     <color name="corNavBarNoite">#FF3BF56F</color>
     <color name="corFundoNoite">#FFB83232</color>
+    <color name="uva">#FFFFFFFF</color>
 </resources>
