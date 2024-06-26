@@ -1,5 +1,7 @@
 package com.example.trab1progmov.ui;
 
+import static androidx.core.content.ContextCompat.getSystemService;
+
 import android.content.Context;
 import android.util.Log;
 import android.view.LayoutInflater;

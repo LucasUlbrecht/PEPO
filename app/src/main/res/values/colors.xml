@@ -7,9 +7,17 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="corNavBarDia">#FFFA3B3B</color>
-    <color name="corFundoDia">#FFF9F8B4</color>
-    <color name="corNavBarNoite">#FF3BF56F</color>
-    <color name="corFundoNoite">#FFB83232</color>
-    <color name="uva">#FFFFFFFF</color>
+
+    <color name="background_melancia">#FFB83232</color>
+    <color name="navbar_melancia">#FF3BF56F</color>
+    <color name="txt_melancia">#FFFFFF</color>
+
+    <color name="background_maca">#FFF9F8B4</color>
+    <color name="navbar_maca">#FFFA3B3B</color>
+    <color name="txt_maca">#000000</color>
+
+    <color name="background_uva">#6A5ACD</color>
+    <color name="navbar_uva">#483D8B</color>
+    <color name="txt_uva">#FFFFFF</color>
+
 </resources>

@@ -5,13 +5,13 @@ import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
 public class ColorViewModel extends ViewModel {
-    private final MutableLiveData<Integer> selectedColor = new MutableLiveData<>();
+    private final MutableLiveData<int[]> selectedColors = new MutableLiveData<>();
 
-    public void setSelectedColor(int color) {
-        selectedColor.setValue(color);
+    public void setSelectedColors(int[] colors) {
+        selectedColors.setValue(colors);
     }
 
-    public LiveData<Integer> getSelectedColor() {
-        return selectedColor;
+    public LiveData<int[]> getSelectedColor() {
+        return selectedColors;
     }
 }

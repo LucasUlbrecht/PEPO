@@ -1,8 +1,6 @@
 package com.example.trab1progmov.ui.home;
 
-import android.graphics.Color;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -21,8 +19,8 @@ import com.example.trab1progmov.MusicPlayerFragment;
 import com.example.trab1progmov.MusicPlayerListener;
 import com.example.trab1progmov.R;
 import com.example.trab1progmov.databinding.FragmentHomeBinding;
-import com.example.trab1progmov.ui.notifications.ColorViewModel;
 import com.example.trab1progmov.ui.MusicListAdapter;
+import com.example.trab1progmov.ui.notifications.ColorViewModel;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,23 +41,20 @@ public class HomeFragment extends Fragment implements MusicPlayerListener {
     private FrameLayout frameLayout;
 
     private ColorViewModel colorViewModel;
+    private FragmentHomeBinding binding;
 
     public HomeFragment() {
     }
 
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        FragmentHomeBinding binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         // Initialize the ViewModel
         colorViewModel = new ViewModelProvider(requireActivity()).get(ColorViewModel.class);
 
-        // Observe the selected color
-        colorViewModel.getSelectedColor().observe(getViewLifecycleOwner(), color -> {
-            if (color != null) {
-                root.setBackgroundColor(color);
-            }
-        });
+        // Observe the selected colors
+        colorViewModel.getSelectedColor().observe(getViewLifecycleOwner(), this::updateColors);
 
         List<Music> musicList = createMusicList();
         musicPlayer = MusicPlayer.getInstance(requireContext());
@@ -161,5 +156,11 @@ public class HomeFragment extends Fragment implements MusicPlayerListener {
     public void switchToList() {
         gridView.setVisibility(View.GONE);
         listView.setVisibility(View.VISIBLE);
+    }
+
+    private void updateColors(int[] colors) {
+        binding.getRoot().setBackgroundColor(colors[0]); // Background color
+        // Example of updating button colors:
+        binding.navBar.setBackgroundColor(colors[1]);
     }
 }
