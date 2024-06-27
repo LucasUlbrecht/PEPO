@@ -127,14 +127,18 @@ public class HomeFragment extends Fragment implements MusicPlayerListener {
 
     @Override
     public void onMusicStarted(Music music) {
-        if (musicPlayerFragment == null || !musicPlayerFragment.isAdded()) {
-            musicPlayerFragment = MusicPlayerFragment.newInstance(music, this.requireContext());
-            musicPlayer.addListener(musicPlayerFragment);
-            getChildFragmentManager().beginTransaction()
-                    .replace(R.id.musicPlayerFragmentContainer, musicPlayerFragment)
-                    .commit();
+        if (isAdded() && getContext() != null) {  // Verifica se o fragmento está anexado e o contexto não é nulo
+            if (musicPlayerFragment == null || !musicPlayerFragment.isAdded()) {
+                musicPlayerFragment = MusicPlayerFragment.newInstance(music, requireContext());
+                musicPlayer.addListener(musicPlayerFragment);
+                getChildFragmentManager().beginTransaction()
+                        .replace(R.id.musicPlayerFragmentContainer, musicPlayerFragment)
+                        .commit();
+            } else {
+                musicPlayerFragment.updateMusicInformation(music);
+            }
         } else {
-            musicPlayerFragment.updateMusicInformation(music);
+            // Fragmento não está anexado, você pode lidar com isso, se necessário
         }
     }
 
@@ -146,6 +150,22 @@ public class HomeFragment extends Fragment implements MusicPlayerListener {
     @Override
     public void onMusicStopped() {
         // Implement any behavior for music stopped if necessary
+    }
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        if (musicPlayer != null) {
+            musicPlayer.addListener(this);
+        }
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        if (musicPlayer != null) {
+            musicPlayer.removeListener(this);
+        }
     }
 
     public void switchToGrid() {

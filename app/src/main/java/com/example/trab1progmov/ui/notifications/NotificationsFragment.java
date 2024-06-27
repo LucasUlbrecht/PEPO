@@ -1,5 +1,6 @@
 package com.example.trab1progmov.ui.notifications;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,18 +9,13 @@ import android.view.Window;
 import android.view.WindowManager;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.Toolbar;
 
-import android.util.TypedValue;
 import androidx.annotation.NonNull;
-import androidx.appcompat.app.ActionBar;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.app.AppCompatDelegate;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-import androidx.core.content.ContextCompat;
-import androidx.navigation.ui.NavigationUI;
 
+import com.example.trab1progmov.ui.ActivityLogin;
 import com.example.trab1progmov.R;
 import com.example.trab1progmov.databinding.FragmentNotificationsBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -56,6 +52,14 @@ public class NotificationsFragment extends Fragment {
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
                 // Do nothing
+            }
+        });
+
+        // Configure the ImageButton
+        binding.imgBtnSair.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                exit(v);
             }
         });
 
@@ -100,8 +104,13 @@ public class NotificationsFragment extends Fragment {
         Window window = requireActivity().getWindow();
         window.addFlags(WindowManager.LayoutParams.FLAG_DRAWS_SYSTEM_BAR_BACKGROUNDS);
         window.setStatusBarColor(colors[2]);
+    }
 
-
+    // Método para ser chamado ao clicar no botão
+    public void exit(View view) {
+        Intent intent = new Intent(getActivity(), ActivityLogin.class);
+        startActivity(intent);
+        requireActivity().finish(); // Encerra a atividade atual
     }
 
     @Override

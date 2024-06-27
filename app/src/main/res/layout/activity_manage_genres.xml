@@ -7,4 +7,18 @@
     android:layout_height="match_parent"
     tools:context=".ui.ManageGenresActivity">
 
+    <ListView
+        android:id="@+id/listViewGenres"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp" />
+
+    <Button
+        android:id="@+id/btnAdicionarGenres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="adicionar"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="601dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

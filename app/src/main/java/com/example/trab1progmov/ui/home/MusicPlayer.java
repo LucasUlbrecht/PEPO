@@ -2,13 +2,11 @@ package com.example.trab1progmov.ui.home;
 
 import android.content.Context;
 import android.media.MediaPlayer;
-import android.os.Build;
 import android.util.Log;
 
 import com.example.trab1progmov.Music;
 import com.example.trab1progmov.MusicPlayerListener;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
@@ -51,20 +49,20 @@ public class MusicPlayer {
 
     private MusicPlayer(Context context) {
         applicationContext = context.getApplicationContext();
-
     }
 
-
-    public void setCurrentMusic(Music music){
-        currentMusic=music;
+    public void setCurrentMusic(Music music) {
+        currentMusic = music;
     }
+
     public static synchronized MusicPlayer getInstance(Context context) {
         if (instance == null) {
             instance = new MusicPlayer(context);
         }
         return instance;
     }
-    public void play(){
+
+    public void play() {
         play(this.currentMusic);
     }
 
@@ -75,43 +73,32 @@ public class MusicPlayer {
     public void play(Music selectedMusic) {
         Log.d("playrequire", "playrequire");
 
-        // Verifica se o MediaPlayer está tocando
         if (mediaPlayer != null && mediaPlayer.isPlaying()) {
-            // Verifica se a música selecionada é a mesma que está sendo reproduzida
             if (currentMusic.getName().equals(selectedMusic.getName())) {
-                // Se sim, pausa a reprodução
                 pause();
                 return;
             } else {
-                // Se não for a mesma música, para a reprodução atual e libera o MediaPlayer
                 mediaPlayer.stop();
                 mediaPlayer.release();
                 mediaPlayer = null;
             }
         }
 
-        // Inicializa o MediaPlayer com a nova música
         int rawId = selectedMusic.getSongId();
         currentMusic = selectedMusic;
         mediaPlayer = MediaPlayer.create(applicationContext, rawId);
 
         if (mediaPlayer != null) {
-            // Inicia a reprodução da nova música
             mediaPlayer.start();
             Log.d("TAG", "A música está tocando.");
             notifyMusicStarted(selectedMusic);
         } else {
-            // Falha ao criar o MediaPlayer
             Log.e("error", "Falha ao criar o MediaPlayer.");
         }
     }
 
-
-
-
-
     public void pause() {
-        if (mediaPlayer.isPlaying()) {
+        if (mediaPlayer != null && mediaPlayer.isPlaying()) {
             mediaPlayer.pause();
             Log.d("TAG", "A reprodução foi pausada.");
             notifyMusicPaused();
@@ -119,13 +106,18 @@ public class MusicPlayer {
     }
 
     public void stop() {
-        mediaPlayer.stop();
-        mediaPlayer.seekTo(0);
+        if (mediaPlayer != null) {
+            mediaPlayer.stop();
+            mediaPlayer.seekTo(0);
+        }
     }
-    public boolean isEmpty(){ return mediaPlayer==null; }
+
+    public boolean isEmpty() {
+        return mediaPlayer == null;
+    }
 
     public boolean isPlaying() {
-        return mediaPlayer.isPlaying();
+        return mediaPlayer != null && mediaPlayer.isPlaying();
     }
 
     public void release() {
@@ -136,11 +128,19 @@ public class MusicPlayer {
     }
 
     public int getMediaDuration() {
-        return mediaPlayer.getDuration();
+        if (mediaPlayer != null) {
+            return mediaPlayer.getDuration();
+        } else {
+            return 0;
+        }
     }
 
     public int getCurrentMediaPosition() {
-        return mediaPlayer.getCurrentPosition();
+        if (mediaPlayer != null) {
+            return mediaPlayer.getCurrentPosition();
+        } else {
+            return 0;
+        }
     }
 
     public Music getMusic() {
@@ -149,13 +149,10 @@ public class MusicPlayer {
 
     private boolean isPlayingSafe() {
         try {
-            return mediaPlayer.isPlaying();
+            return mediaPlayer != null && mediaPlayer.isPlaying();
         } catch (IllegalStateException e) {
-            // Trate a exceção aqui, se necessário
             Log.e("MediaPlayer", "Erro ao verificar se está tocando", e);
             return false;
         }
     }
-
-
 }
