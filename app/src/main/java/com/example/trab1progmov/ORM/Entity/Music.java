@@ -2,9 +2,10 @@ package com.example.trab1progmov.ORM.Entity;
 
 import androidx.room.Entity;
 import androidx.room.ForeignKey;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 @Entity (foreignKeys = @ForeignKey(entity = Autor.class,
-        parentColumns = "id",
+        parentColumns = "autorId",
         childColumns = "idArtist",
         onDelete = ForeignKey.CASCADE))
 public class Music {
@@ -62,10 +63,8 @@ public class Music {
     public void setLinkPhoto(String linkPhoto) {
         this.linkPhoto = linkPhoto;
     }
-
+    @Ignore
     public Music(int id, String title) {
-
-        this.id = id;
         this.title = title;
     }
 }

@@ -13,10 +13,10 @@ public interface AutorDao {
     @Insert
     void insert(Autor autor);
 
-    @Query("SELECT * FROM Autor WHERE id = :autorId")
+    @Query("SELECT * FROM Autor WHERE autorId = :autorId")
     Autor getAutorById(int autorId);
 
     @Transaction
-    @Query("SELECT * FROM Autor WHERE id = :autorId")
+    @Query("SELECT * FROM Autor WHERE autorId = :autorId")
     AutorWithGenre getAutorWithGenres(int autorId);
 }

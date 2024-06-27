@@ -1,16 +1,16 @@
 package com.example.trab1progmov.ORM.Entity;
 
 import androidx.room.Embedded;
-import androidx.room.Junction;
 import androidx.room.Relation;
+import androidx.room.Junction;
 
 import java.util.List;
 
 public class AutorWithGenre {
     @Embedded public Autor autor;
     @Relation(
-            parentColumn = "id",
-            entityColumn = "id",
+            parentColumn = "autorId",
+            entityColumn = "genreId",
             associateBy = @Junction(Autor_Genre.class)
     )
     public List<Genres> genres;

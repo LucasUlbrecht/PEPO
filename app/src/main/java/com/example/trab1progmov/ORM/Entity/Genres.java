@@ -6,23 +6,28 @@ import androidx.room.PrimaryKey;
 @Entity
 public class Genres {
     @PrimaryKey(autoGenerate = true)
-    private int id;
+    private int genreId;
     private String description;
 
     @Override
     public String toString() {
         return "Genres{" +
-                "id=" + id +
+                "id=" + genreId +
                 ", description='" + description + '\'' +
                 '}';
     }
 
-    public int getId() {
-        return id;
+    public Genres(int genreId, String description) {
+        this.genreId = genreId;
+        this.description = description;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getGenreId() {
+        return genreId;
+    }
+
+    public void setGenreId(int genreId) {
+        this.genreId = genreId;
     }
 
     public String getDescription() {
@@ -30,11 +35,6 @@ public class Genres {
     }
 
     public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public Genres(int id, String description) {
-        this.id = id;
         this.description = description;
     }
 }

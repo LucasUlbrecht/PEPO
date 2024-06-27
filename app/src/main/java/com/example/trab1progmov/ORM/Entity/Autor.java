@@ -1,32 +1,32 @@
 package com.example.trab1progmov.ORM.Entity;
-import com.example.trab1progmov.ORM.Entity.TypeConverter.GenresConverter;
+
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
+
+import com.example.trab1progmov.ORM.Entity.TypeConverter.GenresConverter;
+
 import java.util.ArrayList;
 
 @Entity
-@TypeConverters(GenresConverter.class)
 public class Autor {
     @PrimaryKey(autoGenerate = true)
-    private int id;
+    private int autorId;
     private String name;
     private int followers;
     private String linkPhoto;
+    @TypeConverters(GenresConverter.class)
     private ArrayList<Genres> genres;
     private int popularity;
     private String type;
     private String uri;
-    @Ignore
-    public Autor(int id, String name, int followers, String linkPhoto) {
-        this.id = id;
-        this.name = name;
-        this.followers = followers;
-        this.linkPhoto = linkPhoto;
-    }
 
+    // Construtor público vazio
+    public Autor() {}
+
+    // Construtor com todos os campos
     public Autor(int id, String name, int followers, String linkPhoto, ArrayList<Genres> genres, int popularity, String type, String uri) {
-        this.id = id;
+        this.autorId = id;
         this.name = name;
         this.followers = followers;
         this.linkPhoto = linkPhoto;
@@ -36,12 +36,12 @@ public class Autor {
         this.uri = uri;
     }
 
-    public int getId() {
-        return id;
+    public int getAutorId() {
+        return autorId;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public void setAutorId(int id) {
+        this.autorId = id;
     }
 
     public String getName() {
@@ -98,19 +98,5 @@ public class Autor {
 
     public void setUri(String uri) {
         this.uri = uri;
-    }
-
-    @Override
-    public String toString() {
-        return "Autor{" +
-                "id=" + id +
-                ", name='" + name + '\'' +
-                ", followers=" + followers +
-                ", linkPhoto='" + linkPhoto + '\'' +
-                ", genres=" + genres +
-                ", popularity=" + popularity +
-                ", type='" + type + '\'' +
-                ", uri='" + uri + '\'' +
-                '}';
     }
 }

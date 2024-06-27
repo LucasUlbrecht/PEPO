@@ -7,7 +7,6 @@ import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
 import java.util.ArrayList;
-import java.util.List;
 
 public class GenresConverter {
     @TypeConverter
@@ -16,7 +15,7 @@ public class GenresConverter {
             return null;
         }
         Gson gson = new Gson();
-        Type type = new TypeToken<List<Genres>>() {}.getType();
+        Type type = new TypeToken<ArrayList<Genres>>() {}.getType();
         return gson.toJson(genres, type);
     }
 
@@ -26,7 +25,7 @@ public class GenresConverter {
             return null;
         }
         Gson gson = new Gson();
-        Type type = new TypeToken<List<Genres>>() {}.getType();
+        Type type = new TypeToken<ArrayList<Genres>>() {}.getType();
         return gson.fromJson(genresString, type);
     }
 }

@@ -1,21 +1,20 @@
 package com.example.trab1progmov.ORM.Entity;
 
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 
-@Entity(primaryKeys = {"autorId", "genreId"})
+@Entity(primaryKeys = {"autorId", "genreId"},
+        foreignKeys = {
+                @ForeignKey(entity = Autor.class,
+                        parentColumns = "autorId",
+                        childColumns = "autorId"),
+                @ForeignKey(entity = Genres.class,
+                        parentColumns = "genreId",
+                        childColumns = "genreId")
+        })
 public class Autor_Genre {
         public int autorId;
         public int genreId;
-
-        // Getters e Setters
-
-        @Override
-        public String toString() {
-                return "Autor_Genre{" +
-                        "autorId=" + autorId +
-                        ", genreId=" + genreId +
-                        '}';
-        }
 
         public Autor_Genre(int autorId, int genreId) {
                 this.autorId = autorId;

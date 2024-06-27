@@ -1,6 +1,7 @@
 package com.example.trab1progmov.ORM.Entity;
 
 import androidx.room.Entity;
+import androidx.room.Ignore;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 import com.example.trab1progmov.ORM.Entity.TrackConverter;
@@ -25,7 +26,7 @@ public class Playlist {
 
     @TypeConverters(com.example.trab1progmov.ORM.Entity.TrackConverter.class)
     private List<Track> tracks;
-
+    @Ignore
     public Playlist(int id, boolean collaborative, String description, String spotifyUrl, int followersCount, String href, String playlistId, String name) {
         this.id = id;
         this.collaborative = collaborative;
