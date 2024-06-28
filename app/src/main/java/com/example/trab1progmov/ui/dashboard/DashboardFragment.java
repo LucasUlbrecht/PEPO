@@ -1,26 +1,19 @@
 package com.example.trab1progmov.ui.dashboard;
 
-import android.animation.ObjectAnimator;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.LayoutInflater;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
-import com.example.trab1progmov.MainActivity;
 import com.example.trab1progmov.R;
 import com.example.trab1progmov.databinding.FragmentDashboardBinding;
-import com.example.trab1progmov.ui.home.HomeFragment;
 import com.example.trab1progmov.ui.home.MusicPlayer;
 
 public class DashboardFragment extends Fragment {
